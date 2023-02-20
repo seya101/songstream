@@ -1,14 +1,15 @@
 <template>
     <div class="navbar">
       <nav>
-        <h1><router-link :to="{ name: 'Home' }">Song<span style="font-weight:bold;color:orange;">Stream</span></router-link></h1>
+        <img src="@/assets/image/logo1.png"/>
+        <h1><router-link :to="{ name: 'Home' }">SongStream</router-link></h1>
         <div class="links">
             <div v-if="user">
-                <button @click="handleClick">Logout</button>
+                <button class="btn-primary" @click="handleClick">Logout</button>
             </div>
             <div v-else>
                 <router-link class="btn" :to="{ name: 'Signup' }">Signup</router-link>
-                <router-link class="btn" :to="{ name: 'Login' }">Login</router-link>
+                <router-link class="btn-primary" :to="{ name: 'Login' }">Login</router-link>
             </div>
         </div>
       </nav>
@@ -42,7 +43,7 @@
     .navbar {
       padding: 16px 10px;
       margin-bottom: 60px;
-      background: white;
+      background: #F7F5F4;
     }
     nav {
       display: flex;
@@ -54,7 +55,7 @@
       max-height: 60px;
     }
     nav h1 {
-      margin-left: 20px;
+      margin-left: 10px;
     }
     nav .links {
       margin-left: auto;

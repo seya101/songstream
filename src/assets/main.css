@@ -16,13 +16,29 @@
   color: var(--primary);
 }
 body {
-  background: #fafafa;
+  background: #DAE0E2;
 }
 a {
   text-decoration: none;
 }
 
 /* buttons */
+button, .btn-primary {
+  background: black;
+  border-radius: 8px;
+  border: 0;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  color: #fafafa;
+}
+
+button:hover, .btn-primary:hover {
+  background: #c69f3a;
+  color: white;
+}
+
 button, .btn { 
   background: var(--secondary);
   border-radius: 8px;
@@ -33,7 +49,7 @@ button, .btn {
   display: inline-block;
 }
 button:hover, .btn:hover {
-  background: var(--primary);
+  background: #c69f3a;
   color: white;
 }
 button:disabled {
