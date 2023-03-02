@@ -1,5 +1,6 @@
 <template>
     <div v-for="playlist in playlists" :key="playlist.id">
+    <RouterLink :to="{name: 'PlaylistDetails', params: { id: playlist.id}}">
       <div class="single">
         <div class="thumbnail">
           <img :src="playlist.coverUrl">
@@ -12,13 +13,17 @@
           <p>{{ playlist.songs.length }} songs</p>
         </div>
       </div>
+    </RouterLink>
     </div>
 </template>
   
 <script>
+import { RouterLink } from 'vue-router';
+
   export default {
-    props: ['playlists'],
-  }
+    props: ["playlists"],
+    components: { RouterLink }
+}
 </script>
   
 <style scoped>
